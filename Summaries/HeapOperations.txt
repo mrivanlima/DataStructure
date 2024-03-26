@@ -1,0 +1,75 @@
+Inserting elements
+Deleting elementd from the heap
+Converting an array into a heap
+
+Primitive:
+Bubble Up and Bubble Down
+
+Imagine a heap that is broken where the heap properties fail to hold.
+A[2,4,7,6,5,6,8,9,10]. It fails in item 3 since 7 is bigger than 6.
+6 needs to move up that is called bubble up.
+
+Bubble Up : Swap my value with my parent
+A[2,4,6,5,7,8,9,10]
+
+Pseudo code for bubble up?
+
+BubbleUp(A,J)
+  if J <=1:
+        return
+  else:
+    if A[j] < A[j//2]
+       swap (A[j], A[j//2])
+       BubbleUp(A, j//2)
+  return
+
+In the worst case the number of levels to bubble up is the depth n->n/2 -> n/4... logn Theta(log n) in base 2
+
+
+BubbleDown
+if two children is smaller thant the parent bubbledown is better
+Take the smallest hild and swpa with the paren. BubbleDown the parent.
+
+BubbleDown(A, j):
+    if(lef(i) > n):
+        return
+    if (left(i) <= n and right(i) > n):
+        if(A[i] > A[left(i)]):
+            swap(A[i], A[left(i)])
+            BubbleDown(A, left(i))
+        else  #A has two hildren
+         #Locate smallest of two children
+            if (A[left(i) < Aright[i]])
+               small:= left(i)
+            swap(A[i], A[small])
+            BubbleDown(A, small)
+
+
+Insert
+
+A: [A[i]...A[n]]
+
+Alg for insert :
+
+1. Append e to the end of the heap array.
+2. BubbleUp(A, n+1) O(log n) base 2
+
+Alg for delete:
+ A: [a1, ... aj, ... an]
+  How to delete an, just need to readust the size of the array for (n-1)
+
+  1. Replace the element aj with an.
+  2. Adjust size to (n-1)
+  3. Fix what is broken: 
+      BubbleUp if (an) is less than the parent
+      BubbleDown if (an) is greate than one or both of its children.
+
+Complexity :
+   Swap, Adjust size and BubbleUp or BubbleDown O(log n) base 2.
+
+Find the smallest element in the minheap it will be the first element.
+
+Application:
+
+Queue called priority queue.
+Used in many places
