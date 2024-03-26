@@ -1,0 +1,59 @@
+What is a heap?
+
+It is an abstract data type.
+Will have an A: [array of numbers 0, 1...]
+They will be called the keys.
+
+Can have other data
+
+
+
+
+Operations of a heap
+heapify (A) -> convert it into a heap
+It is a special array with special properties. Heapify will make it special.
+
+Insert(e)
+Delete(e)
+Minimum Element - Find the smallest key in the heap.
+
+
+Heap property
+MinHeap and MaxHeap
+
+A:[2,4,5,7,6,18,6,14,9]
+2 is root
+4 is the left child
+5 is right child
+
+
+i ----> 2i is the left child
+        2i + 1 is the right child
+
+for element j [j//2] is the parent
+A[i] has no parent and is the root.
+
+                              2
+                            4   5
+                           7 6 8 6
+                         19 9
+
+Heap is a special binary tree layed out as an array.
+Key property if a node has a child it must have a left child.
+if 2i + 1 exists then 2i must also exist.
+if 2i+1 is the right child if 2i + 1 <= n
+For every A[i] A[2i] is the left child if 2i <= n
+
+All important property: MinHeap property
+    Every node A[i] <= A[2i]
+               A[i] <= A[2i+1] if 2i + n <= n
+That is for min heap property.
+
+If A is a minheap then A[0] is the minimum element of the heap.
+
+Proof: Induction on the depth of the heap.
+     Base case: Heap depth = 1 is an array of size 1. Root of A[0] is trivially the smaller
+     Let the result hold for all heaps of depth d.
+     
+    
+Complexity analysis

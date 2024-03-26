@@ -1,0 +1,4 @@
+Associated key to some value and key exists only once.
+
+Dictionaries are implemented using hastables.
+
