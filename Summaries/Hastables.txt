@@ -1,0 +1,3 @@
+hastables is used to implement values  with key values.
+
+Find KeyInsert KeyDelete KeyUpdate key -> value
