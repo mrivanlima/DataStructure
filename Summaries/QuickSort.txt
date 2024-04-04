@@ -1,0 +1,21 @@
+Quick Sort does a very good think as In Place sorting
+Minimizes data movement
+
+Divide and Conquer for merge Sort and quicksort
+Quicksort will do partition instead.
+
+Idea:
+[1,7,2,4,6,8,3]
+
+Do a partition by choosing a pivot it can be any element.
+
+Pseudocode:
+
+Quicksort (A, left, right)
+   1. Choose a pivot example A[right]
+   2. position = partition (A, right)
+   3. Quicksort (A, left, position - 1)
+   4. Quicksort (A, position + 1, right)
+
+    
+
