@@ -18,4 +18,7 @@ Quicksort (A, left, right)
    4. Quicksort (A, position + 1, right)
 
     
+Worst Case analysis
 
+ideal goal is a balanced partition. meaning, the partition element is bigger than right side and smaller than left side
+Worst scenario is on a already sorted array with partition element being the biggest
